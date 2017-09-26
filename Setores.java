@@ -36,11 +36,33 @@ public class Setores implements IimprimirDados {
 	// pista. Área VIP pode ser mais cara que Social;
 
 	public double getValorUnitario() {
-		return valorUnitario;
+		return this.valorUnitario;
 	}
 
+	
+	
 	public void setValorUnitario(double valorUnitario) {
 		this.valorUnitario = valorUnitario;
 	}
+
+	
+	
+	public String getTipoSetor() {
+		return this.tipoSetor;
+	}
+
+	
+	
+	public int getCapacidade() {
+		return this.capacidade;
+	}
+
+	
+	
+	public String getDescricaoSetor() {
+		return this.descricaoSetor;
+	}
+	
+	
 
 }

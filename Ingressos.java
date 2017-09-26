@@ -42,13 +42,13 @@ public class Ingressos implements IimprimirDados {
 
 	// Para quando desejar-se recolher dados para operações!
 	public double getValorIngresso() {
-		return valorIngresso;
+		return this.valorIngresso;
 	}
 
 	// Para que quando chamado, o sistema possa dar desconto caso seja a vista e, no
 	// cartão, não ter desconto;
 	public String getFormaPagamento() {
-		return formaPagamento;
+		return this.formaPagamento;
 	}
 
 	public void setFormaPagamento(String formaPagamento) {

@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Iterator;
+
 
 
 public class Sistema {
@@ -59,14 +61,13 @@ public class Sistema {
 	}
 
 	/*
-	 * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MÉTODOS GRÁFICOS PARA INTERFACE DO SISTEMA
-	 * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	 * %%%%%%%%%%%%%%%% MÉTODOS GRÁFICOS PARA INTERFACE DO SISTEMA %%%%%%%%%%%%%%%%%%
 	 */
 
 	// Random  = new Random();
 
 	// Página inicial do sistema (Opçoes disponíveis);
-	void menuInicializaSistema() {
+	public void menuInicializaSistema() {
 
 		System.out.println("\t******** SISTEMA DE VENDAS DE INGRESSOS *********/n/n/n");
 		System.out.println("\tDigite uma das opções: ");
@@ -80,10 +81,10 @@ public class Sistema {
 	/* %%%%%%%%%%%%%%%%%%% Menus para Cliente %%%%%%%%%%%%%%%%%%%%%%%% */
 
 	// Menu para Clientes, após login:
-	void menuClientes() {
+	public void menuClientes() {
 
 		System.out.println("\t**************************************************\n");
-		System.out.println("\t\t****** SEJA MUITO BEM-VINDO,");
+		System.out.println("\t\t****** SEJA MUITO BEM-VINDO, *******");
 		System.out.println("\t**************************************************\n");
 		System.out.println("\t(1) Buscar evento");
 		System.out.println("\t(2) Comprar Ingresso");
@@ -94,10 +95,10 @@ public class Sistema {
 	}
 
 	// Menu que aparece para o cliente quando deseja-se modificar dados pessoais;
-	void menuAlterDadosCliente() {
+	public void menuAlterDadosCliente() {
 
 		System.out.println("\t**************************************************\n");
-		System.out.println("\t\t****** ALTERAÇÃO DE DADOS PARA CLIENTES");
+		System.out.println("\t\t****** ALTERAÇÃO DE DADOS PARA CLIENTES **********");
 		System.out.println("\t**************************************************\n");
 		System.out.println("\t(1) Alterar Nome");
 		System.out.println("\t(2) Alterar Contato Telefônico");
@@ -108,10 +109,10 @@ public class Sistema {
 	}
 
 	// solicitando se o cliente deseja comprar ingresso;
-	void menuComprarIngresso() {
+	public void menuComprarIngresso() {
 
 		System.out.println("\t**************************************************\n");
-		System.out.println("\t\t****** COMPRA DE INGRESSOS POR CLIENTES");
+		System.out.println("\t\t****** COMPRA DE INGRESSOS POR CLIENTES ********");
 		System.out.println("\t**************************************************\n");
 		System.out.println("\t(1) Deseja compra ingresso a vista? Tem 5% de desconto!");
 		System.out.println("\t(2) Deseja compra ingresso no cartão Não há descontos!");
@@ -123,7 +124,7 @@ public class Sistema {
 
 	// Menu que aparece para Clientes para que possam ver os eventos disponíveis;
 	// Somente essas categorias serão adicionadas;
-	void menuEventos() {
+	public void menuEventos() {
 
 		System.out.println("\n\t*************************************************\n");
 		System.out.println("\t\t**** EVENTOS OFERTADOS **** \n");
@@ -137,7 +138,7 @@ public class Sistema {
 	}
 
 	// Menu para escolha do Setor;
-	void menuSetor() {
+	public void menuSetor() {
 
 		System.out.println("\n\t*************************************************\n");
 		System.out.println("\t\t**** SETORES OFERTADOS **** \n");
@@ -151,14 +152,13 @@ public class Sistema {
 	}
 
 	/*
-	 * %%%%%%%%%%%%%%%%%%%% MENUS PARA ADMINISTRADOR DO SISTEMA
-	 * %%%%%%%%%%%%%%%%%%%%%%
-	 */
+	 * %%%%%%%%%%%%%%%%%%%% MENUS PARA ADMINISTRADOR DO SISTEMA %%%%%%%%%%%%%%%%%%%%%%
+	*/
 
 	// Menu para Administrador, após login:
-	void menuAdmin() {
+	public void menuAdmin() {
 		System.out.println("\t**************************************************\n");
-		System.out.println("\t\t****** Acesso privilegiado ao Administrador	");
+		System.out.println("\t\t****** Acesso privilegiado ao Administrador	********");
 		System.out.println("\t**************************************************\n");
 		System.out.println("\t(1) Cadastrar evento");
 		System.out.println("\t(2) Buscar evento");
@@ -171,8 +171,8 @@ public class Sistema {
 	// Menu para Administrador, após login:
 	void menuAlterarDadosEventos() {
        	System.out.println("\t**************************************************\n");
-       	System.out.println("\t\t****** Acesso privilegiado ao Administrador	");
-       	System.out.println("\t\t****** ALTERAÇÃO DE DADOS DE UM EVENTO");
+       	System.out.println("\t\t****** Acesso privilegiado ao Administrador ********");
+       	System.out.println("\t\t****** ALTERAÇÃO DE DADOS DE UM EVENTO ********");
        	System.out.println("\t**************************************************\n");
     	System.out.println("\t(1) Alterar Nome");
     	System.out.println("\t(2) Alterar data De Realizacao");
@@ -183,51 +183,53 @@ public class Sistema {
 	}
 
 	
-	
-	/* 
-	 
-	 
-	// verificando se o login informado é igual ao login cadastrado
-	int autenticacaoLogin(String lg) {
-		int op = 100;
-		for (Cliente c : listaClientes) {
-			if (c.getLogin().equals(lg)) {
-				op = 1;
-			} else {
-				op = 0;
-			}
-		} 
-		return op;
-	}
+	// Verificando se o 'login' e 'senha' para um cliente informado é igual ao 'login' e 'senha' que foram cadastrados; 
+	public boolean autenticarAcessoCliente(String login, String senha) {
+       	System.out.println(" Aguarde, login sendo autenticado....");
+
+       	for(Cliente client : listaClientes) {
+       		if(client.getLogin().equals(login) && client.getSenha().equals(senha)) {
+       			return true; }
+       	}
+       	return false;
+    }
 
 	
 	
-	// verificando se a senha informada é igual a senha cadastrada
-	int autenticacaoSenha(String sn) {
-		int op = 100;
-		for (Cliente c : listaClientes) {
-			if (c.getSenha().equals(sn)) {
-				op = 1;
-			} else {
-				op = 0;
-			}
-		} 
-		return op;
-	}
+	// Verificando se o 'login' e 'senha' para o Administrador cadastrado se é igual ao login e senha que foram cadastrados; 
+	public boolean autenticarAcessoAdmin(String login, String senha) {
+       	System.out.println(" Aguarde, login sendo autenticado....");
 
+       		if(Admin1.getLogin().equals(login) && Admin1.getSenha().equals(senha)) {
+       			return true; }
+       		else {
+       	       	return false;
+       		}
+    }
 	
-	int buscarEvento(String n) {
-		int op = 100;
-		for (Evento e : eventos) {
-			if (e.getNome().equals(n)) {
-				op = 1;
-			} else {
-				op = 0;
-			} 
-		} 
-		return op;
-	}
+	
+	public void procurarEvento(String nameEvent, String date) {
+       	System.out.println(" Aguarde, Evento sendo procurado....");
 
-*/
+       	for(Eventos eventos : listaEventos) {
+       		if(eventos.getNomeEvento().equals(nameEvent) && eventos.getDataRealizacao().equals(date)) {
+       	       	System.out.println("Evento " + eventos.getNomeEvento() + " encontrado para a data escolhida!"); }
+       		else {
+       			System.out.println("Evento " + eventos.getNomeEvento() + " não encontrado devido a data ou nome escolhidos não estarem no sistema. Desculpe!"); }	
+       	}  	
+    }
+	
+	
+	public void procurarSetor(String namesetor) {
+       	System.out.println(" Aguarde, Setor sendo procurado....");
+
+       	for(Setores setor : listaSetores) {
+       		if(setor.getTipoSetor().equals(namesetor)) {
+       	       	System.out.println("Setor " + setor.getTipoSetor() + " foi encontrado!"); }
+       		else {
+       			System.out.println("Evento " + setor.getTipoSetor() + " não foi encontrado devido ao nome do setor escolhido não estar no sistema. Desculpe!"); }	
+       	}
+    }
+
 
 }

@@ -62,7 +62,7 @@ public class Eventos implements IimprimirDados {
 	// adminstrador poderá fazer modificações futuras!
 
 	public String getNomeEvento() {
-		return nomeEvento;
+		return this.nomeEvento;
 	}
 
 	public void setNomeEvento(String nomeEvento) {
@@ -71,7 +71,7 @@ public class Eventos implements IimprimirDados {
 
 	// Alterações e busca por Nome do Evento;
 	public String getTipoEvento() {
-		return tipoEvento;
+		return this.tipoEvento;
 	}
 
 	public void setTipoEvento(String tipoEvento) {
@@ -80,7 +80,7 @@ public class Eventos implements IimprimirDados {
 
 	// Alterações e busca por Valor do ingresso para Evento;
 	public double getValorUnitario() {
-		return valorUnitario;
+		return this.valorUnitario;
 	}
 
 	public void setValorUnitario(double valorUnitario) {
@@ -89,7 +89,7 @@ public class Eventos implements IimprimirDados {
 
 	// Alterações e busca por Descrição do Evento;
 	public String getDescricao() {
-		return descricao;
+		return this.descricao;
 	}
 
 	public void setDescricao(String descricao) {
@@ -98,7 +98,7 @@ public class Eventos implements IimprimirDados {
 
 	// Alterações e busca por Data de Realização do Evento;
 	public String getDataRealizacao() {
-		return dataRealizacao;
+		return this.dataRealizacao;
 	}
 
 	public void setDataRealizacao(String dataRealizacao) {
@@ -107,7 +107,7 @@ public class Eventos implements IimprimirDados {
 
 	// Alterações e busca por Sinopse do Evento;
 	public String getSinopse() {
-		return sinopse;
+		return this.sinopse;
 	}
 
 	public void setSinopse(String sinopse) {
@@ -116,7 +116,7 @@ public class Eventos implements IimprimirDados {
 
 	// Alterações e busca por Elenco que compõe o Evento;
 	public String getElenco() {
-		return elenco;
+		return this.elenco;
 	}
 
 	public void setElenco(String elenco) {
@@ -125,7 +125,7 @@ public class Eventos implements IimprimirDados {
 
 	// Alterações e busca por Capacidade Total do Evento;
 	public int getCapacidade() {
-		return capacidade;
+		return this.capacidade;
 	}
 
 	public void setCapacidade(int capacidade) {
@@ -134,7 +134,7 @@ public class Eventos implements IimprimirDados {
 
 	// Alterações e busca por Descrição do Ambiente;
 	public String getDescricaoAmbiente() {
-		return descricaoAmbiente;
+		return this.descricaoAmbiente;
 	}
 
 	public void setDescricaoAmbiente(String descricaoAmbiente) {
@@ -143,7 +143,7 @@ public class Eventos implements IimprimirDados {
 
 	// Alterações e busca por Quantidade de Vagas para Estacionamento;
 	public int getVagasEstacionamento() {
-		return vagasEstacionamento;
+		return this.vagasEstacionamento;
 	}
 
 	public void setVagasEstacionamento(int vagasEstacionamento) {

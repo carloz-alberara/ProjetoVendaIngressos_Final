@@ -15,69 +15,69 @@ public class Pessoa {
 
 	
 	public String getLogin() {
-		return login;
+		return this.login;
 	}
 		
-	public void setLogin(String user) {
-		this.login = user;
+	public void setLogin(String login) {
+		this.login = login;
 		System.out.println("Login alterado com Sucesso!");
 		System.out.println("Seu novo login foi alterado para: " + this.login);
 	}
 	
 	public String getSenha() {
-		return senha;
+		return this.senha;
 	}
 	
-	public void setSenha(String key) {
-		this.login = key;
+	public void setSenha(String senha) {
+		this.senha = senha;
 		System.out.println("Senha alterada com Sucesso!");
 		
 	}
 	
 	public String getNome() {
-		return nome;
+		return this.nome;
 	}
 	
-	public void setNome(String myName) {
-		this.nome = myName;
+	public void setNome(String nome) {
+		this.nome = nome;
 		System.out.println("Seu nome foi alterado com Sucesso!");
 		System.out.println("Seu nome foi alterado para: " + this.nome);
 	}
 		
 	public String getCpf() {
-		return cpf;
+		return this.cpf;
 	}	
 	
 	public String getEmail() {
-		return email;
+		return this.email;
 	}
 	
-	public void setEmail(String endMail) {
-		this.email = endMail;
+	public void setEmail(String email) {
+		this.email = email;
 		System.out.println("E-mail alterado com Sucesso!");
 		System.out.println("Seu E-mail foi alterado para: " + this.email);
 	}
 	
 	public String getEndereco() {
-		return endereco;
+		return this.endereco;
 	}
 	
-	public void setEndereco(String endress) {
-		this.endereco = endress;
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 		System.out.println("Endereço alterado com Sucesso!");
 		System.out.println("O seu endereço foi alterado para: " + this.endereco);
 	}
 	
 	public String getDataNascimento() {
-		return dataNascimento;
+		return this.dataNascimento;
 	}
 	
 	public String getTelefone() {
-		return telefone;
+		return this.telefone;
 	}
 	
-	public void setTelefone(String phone) {
-		this.telefone = phone;
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
 		System.out.println("Número de telefone alterado com Sucesso!");
 		System.out.println("O seu contato telefônico foi alterado para: " + this.telefone);
 	}
