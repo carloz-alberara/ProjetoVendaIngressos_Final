@@ -46,7 +46,7 @@ public class Cliente extends Pessoa implements IimprimirDados {
 	
 	// O cliente precisa dizer se ele é estudante, idoso ou nenhum desses;
 	public String getCategoriaCliente() {
-		return categoriaCliente;
+		return this.categoriaCliente;
 	}
 
 	public void setCategoriaCliente(String categoriaCliente) {
