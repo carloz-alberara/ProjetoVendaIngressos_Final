@@ -1,4 +1,6 @@
 
+
+ // Classe Mãe para as classes filhas Cliente e Administrador! Uso de Herança!
 public class Pessoa {
 	
 	protected String login;

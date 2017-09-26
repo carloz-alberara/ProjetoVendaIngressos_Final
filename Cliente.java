@@ -16,29 +16,25 @@ public class Cliente extends Pessoa implements IimprimirDados {
 	protected String categoriaCliente;
 
 	
-	public Cliente (String myName, String cpfNum, String endMail,
-			 String phone, String dataNasc, String endress,
-			 String user, String key, String categoriaCliente) {
+	public Cliente (String nome, String cpf, String email,
+			 String telefone, String dataNascimento, String endereco,
+			 String login, String senha, String categoriaCliente) {
 		
-		this.nome = myName;
-		this.cpf = cpfNum;
-		this.email = endMail;
-		this.telefone = phone;
-		this.dataNascimento = dataNasc;
-		this.endereco = endress;
-		this.login = user;
-		this.senha = key;
+		this.nome = nome;
+		this.cpf = cpf;
+		this.email = email;
+		this.telefone = telefone;
+		this.dataNascimento = dataNascimento;
+		this.endereco = endereco;
+		this.login = login;
+		this.senha = senha;
 		this.categoriaCliente = categoriaCliente;
-		
-	
-		System.out.println("##### Dados Cadastrados com sucesso! #####");
 			
 	}
 	
+	
 	// Verificar dados cadastrados para cada cliente 
 	// Nesse método há o uso de uma Interface;
-	
-	
 	public void dadosCadastrados() {
 		
 		System.out.println("######## Seus Dados Pessoais ########");
@@ -48,6 +44,7 @@ public class Cliente extends Pessoa implements IimprimirDados {
 	}
 
 	
+	// O cliente precisa dizer se ele é estudante, idoso ou nenhum desses;
 	public String getCategoriaCliente() {
 		return categoriaCliente;
 	}
