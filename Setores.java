@@ -6,8 +6,10 @@ public class Setores implements IimprimirDados {
 	private int capacidade;
 	private String descricaoSetor;
 
+	
+	
+	
 	// Para cadastrar novos Setores. Isso deve ser feito apenas por Admin!
-
 	public void cadastrarSetores(String tipoSetor, double valorUnitario, int capacidade, String descricaoSetor,
 			int vagasEstacionamento) {
 
@@ -20,6 +22,8 @@ public class Setores implements IimprimirDados {
 
 	}
 
+	
+	
 	// Metódo para apenas imprimir todos dos dados cadastrados para um setor
 	// cadastrado!
 	// Nesse método há o uso de uma Interface;
@@ -32,33 +36,30 @@ public class Setores implements IimprimirDados {
 				+ this.capacidade + "/nDescrição do Ambiente: " + this.descricaoSetor);
 	}
 
+	
+	
 	// Cada setor pode possuir uma valor único. Camarote pode ser mais caro que
 	// pista. Área VIP pode ser mais cara que Social;
-
 	public double getValorUnitario() {
 		return this.valorUnitario;
 	}
-
-	
 	
 	public void setValorUnitario(double valorUnitario) {
 		this.valorUnitario = valorUnitario;
 	}
 
 	
+
+	/* %%%%%%%%%%%%%%% MÉTODOS AUXILIARES %%%%%%%%%%%%%%%%%%%%%% */
 	
 	public String getTipoSetor() {
 		return this.tipoSetor;
 	}
-
-	
 	
 	public int getCapacidade() {
 		return this.capacidade;
 	}
 
-	
-	
 	public String getDescricaoSetor() {
 		return this.descricaoSetor;
 	}

@@ -7,7 +7,7 @@ public class Ingressos implements IimprimirDados {
 	private int numeroPoltrona;
 	private boolean clientPresent;
 	private String dataCompra;
-	private String formaPagamento;
+	private int formaPagamento;
 
 	
 	// Geradores de números aleatórios para num_poltrona e ID série de ingressos vendidos;
@@ -15,8 +15,12 @@ public class Ingressos implements IimprimirDados {
 	Random gerarNumeroPoltrona= new Random();
 	
 	
-	/* public void ingressoVendido(int idIngresso, double valorIngresso, int numeroPoltrona, String dataCompra,
-			String formaPagamento, boolean clientPresent) {
+	public Ingressos(int nextInt, double d, int nextInt2, String string, int i, boolean b) {
+		
+	}
+
+	public void ingressoVendido(int idIngresso, double valorIngresso, int numeroPoltrona,
+			String dataCompra, int formaPagamento, boolean clientPresent) {
 
 		this.idIngresso = idIngresso;
 		this.valorIngresso = valorIngresso;
@@ -27,8 +31,6 @@ public class Ingressos implements IimprimirDados {
 
 	}
 	
-	*/
-
 	
 	// Verificar dados de um Ingresso adquirido!
 	// Nesse método há o uso de uma Interface;
@@ -39,6 +41,12 @@ public class Ingressos implements IimprimirDados {
 				+ "/nNúmero da Poltrona: " + this.numeroPoltrona + "/nData de Realização da Compra: " + this.dataCompra
 				+ "/nForma de Pagamento escolhida: " + this.formaPagamento);
 	}
+	
+	
+	// Para buscar o número de identificação única de um ingresso gerado;
+	public int getIDingresso() {
+		return this.idIngresso;
+	}
 
 	// Para quando desejar-se recolher dados para operações!
 	public double getValorIngresso() {
@@ -47,11 +55,11 @@ public class Ingressos implements IimprimirDados {
 
 	// Para que quando chamado, o sistema possa dar desconto caso seja a vista e, no
 	// cartão, não ter desconto;
-	public String getFormaPagamento() {
+	public int getFormaPagamento() {
 		return this.formaPagamento;
 	}
 
-	public void setFormaPagamento(String formaPagamento) {
+	public void setFormaPagamento(int formaPagamento) {
 		this.formaPagamento = formaPagamento;
 	}
 

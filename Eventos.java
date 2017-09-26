@@ -28,9 +28,9 @@ public class Eventos implements IimprimirDados {
 
 	// Cadastrar um novo Evento!
 
-	public void cadastrarEventos(String nomeEvento, String tipoEvento, String descricao, String dataRealizacao,
-			String sinopse, String elenco, double valorUnitario, int capacidade, String descricaoAmbiente,
-			int vagasEstacionamento) {
+	public void cadastrarEventos(String nomeEvento, String tipoEvento, String descricao,
+			String dataRealizacao, String sinopse, String elenco, double valorUnitario,
+			int capacidade, String descricaoAmbiente, int vagasEstacionamento) {
 
 		this.nomeEvento = nomeEvento;
 		this.tipoEvento = tipoEvento;

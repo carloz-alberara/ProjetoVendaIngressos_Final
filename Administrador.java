@@ -15,8 +15,8 @@ public class Administrador extends Pessoa implements IimprimirDados {
 	 *
 	 */
 
-	public Administrador(String nome, String cpf, String email, String telefone, String dataNascimento, String endereco,
-			String login, String senha) {
+	public Administrador(String nome, String cpf, String email, String telefone, String dataNascimento, 
+			String endereco, String login, String senha) {
 
 		this.nome = nome;
 		this.cpf = cpf;
